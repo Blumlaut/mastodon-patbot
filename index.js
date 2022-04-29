@@ -49,8 +49,7 @@ async function loopQueue() {
 
     if(!data) {return}
 
-    var loweredContent = data.content.toLowerCase().replace(/patbot/g, "bot")
-    console.log(loweredContent, loweredContent.search(/please|plz|pls/g), loweredContent.search(/p[ae]t/g))
+    var loweredContent = data.content.toLowerCase().replace(/patbot/g, "bot") // TODO: make this less bad
 
     if ((loweredContent.search(/please|plz|pls/g) != -1)|| (loweredContent.search(/p[ae]t/g) != -1)) {
         var animatedGif = undefined
